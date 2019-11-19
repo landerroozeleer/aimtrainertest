@@ -1,0 +1,130 @@
+@mixin crslTitle {
+  box-shadow: 0 5px 10px $shadow;
+  $size: 7px;
+  color: $white;
+
+  padding: 15px 10px 10px 70px;
+  border-top: 3px solid $orange;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+    circle at bottom left,
+    $carouselGradient1 $size,
+    $carouselGradient2 $size + 1,
+    $carouselGradient2 $size * 2,
+    $carouselGradient3 $size * 2 + 1,
+    $carouselGradient3 $size * 3,
+    $carouselGradient4 $size * 3 + 1,
+    $carouselGradient4 $size * 4,
+    $CarouselBgBody 1px
+  );
+}
+
+@mixin crslArrows {
+  font-size: 12px;
+  margin-top: -2px;
+  padding: 11px;
+}
+
+//---- NORMAL CARD ----
+@mixin crslCardHdr {
+  background-color: $cardPlayedBgHeader;
+}
+
+@mixin crslCardHdrTitle {
+  border-radius: 0px;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: $activeCardTitles;
+}
+
+@mixin crslCardHdrLvl {
+  font-size: 45px;
+  color: $white;
+}
+
+@mixin crslCardHdrDist {
+  padding-right: 5px;
+  font-size: 13px;
+  color: $cardPlayedHeaderDist;
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid $cardPlayedHeaderDist;
+}
+
+@mixin crslCardHdrScore {
+  margin-top: 18px;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  color: transparentize($white, 0.5);
+  background-color: $cardScoreBg;
+}
+
+//---- ACTIVE CARD ----
+@mixin crslCardHdrAct {
+  @include crslCardHdr;
+  background-color: $cardActiveBgHeader;
+}
+
+@mixin crslCardHdrTitleAct {
+  @include crslCardHdrTitle;
+}
+
+@mixin crslCardHdrLvlAct {
+  @include crslCardHdrLvl;
+}
+
+@mixin crslCardHdrDistAct {
+  @include crslCardHdrDist;
+  color: $white;
+  border-color: $white;
+}
+
+@mixin crslCardHdrScoreAct {
+  @include crslCardHdrScore;
+  background-color: white;
+  color: $cardScoreText;
+}
+
+//---- LOCKED CARD ----
+@mixin crslCardHdrLock {
+  @include crslCardHdr;
+  background-color: $cardLockedBgHeader;
+}
+
+@mixin crslCardHdrTitleLock {
+  display: none;
+}
+
+@mixin crslCardHdrLvlLock {
+  @include crslCardHdrLvl;
+  color: $cardLockedLvl;
+}
+
+@mixin crslCardHdrDistLock {
+  @include crslCardHdrDist;
+  display: none;
+}
+
+@mixin crslCardHdrScoreLock {
+  @include crslCardHdrDist;
+  display: none;
+}
+
+//---- GENERAL CARD ----
+@mixin crslCardBody {
+  background-color: $CarouselBgBody;
+  margin: 15px 0 10px;
+}
+
+@mixin crslCard {
+  box-shadow: 0 5px 10px $shadow;
+  width: 300px;
+  margin-left: 6px;
+  margin-bottom: 10px;
+  border: 0px;
+  border-radius: 0px;
+  background-color: $CarouselBgBody;
+}

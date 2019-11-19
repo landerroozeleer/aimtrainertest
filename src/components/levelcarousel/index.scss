@@ -1,0 +1,120 @@
+.titlebar {
+  &-title {
+    @include crslTitle;
+    &-arrow {
+      @include crslArrows;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.crsl {
+  &-card {
+    @include crslCard;
+    .card-header {
+      @include crslCardHdr;
+    }
+    .card-header-level {
+      @include crslCardHdrLvl;
+    }
+    .card-header-title {
+      @include crslCardHdrTitle;
+    }
+    .card-header-dist {
+      @include crslCardHdrDist;
+    }
+    .card-header-score {
+      @include crslCardHdrScore;
+    }
+    .card-body {
+      @include crslCardBody;
+    }
+    .btn-sqr-chart {
+      @include BtnSqrChart;
+      &:hover {
+        @include BtnSqrChartFcs;
+      }
+    }
+    .chart-icon {
+      color: $lightgrey;
+    }
+    .btn-sqr-play {
+      @include BtnSqrPlay;
+      &:hover {
+        @include BtnSqrPlayFcs;
+      }
+    }
+    &-active {
+      @include crslCard;
+      .card-header {
+        @include crslCardHdrAct;
+      }
+      .card-header-title {
+        @include crslCardHdrTitleAct;
+      }
+      .card-header-level {
+        @include crslCardHdrLvlAct;
+      }
+      .card-header-dist {
+        @include crslCardHdrDistAct;
+      }
+      .card-header-score {
+        @include crslCardHdrScoreAct;
+      }
+      .card-body {
+        @include crslCardBody;
+      }
+
+      .btn-sqr-chart {
+        @include BtnSqrChartAct;
+        &:hover {
+          @include BtnSqrChartActFcs;
+        }
+      }
+
+      .btn-sqr-play {
+        @include BtnSqrPlayAct;
+        &:hover {
+          @include BtnSqrPlayActFcs;
+        }
+      }
+    }
+    &-locked {
+      @include crslCard;
+      .card-header {
+        @include crslCardHdrLock;
+      }
+      .card-header-title {
+        @include crslCardHdrTitle;
+      }
+      //ONLY SHOW LEVEL
+      .card-header-title:not(:first-child) {
+        @include crslCardHdrTitleLock;
+      }
+      .card-header-level {
+        @include crslCardHdrLvlLock;
+      }
+      .card-header-dist {
+        @include crslCardHdrDistLock;
+      }
+      .card-header-score {
+        @include crslCardHdrScoreLock;
+      }
+      .card-body {
+        @include crslCardBody;
+      }
+      .btn-sqr-chart {
+        @include BtnSqrChartLock;
+      }
+      .btn-sqr-play {
+        @include BtnSqrPlayLock;
+      }
+    }
+  }
+}
+
+select {
+  appearance: none;
+}

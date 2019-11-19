@@ -1,0 +1,13 @@
+@mixin App {
+  max-width: 990px;
+  margin: auto;
+  padding: 20px;
+  background-color: $appBg;
+}
+
+@mixin title {
+  color: $white;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}

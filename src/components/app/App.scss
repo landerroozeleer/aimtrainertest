@@ -1,0 +1,9 @@
+@import "../../styles/";
+
+.App {
+  @include App;
+}
+
+h1 {
+  @include title;
+}

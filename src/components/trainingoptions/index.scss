@@ -1,0 +1,18 @@
+.btn-sqr {
+  &-skill {
+    @include BtnSqr100pxSkill;
+    &:hover {
+      @include BtnSqr100pxSkillFcs;
+    }
+    &-active {
+      @include BtnSqr100pxSkillFcs;
+      &:hover {
+        @include BtnSqr100pxSkillFcs;
+      }
+    }
+  }
+
+  &-settings {
+    @include BtnSqr100pxSettings;
+  }
+}

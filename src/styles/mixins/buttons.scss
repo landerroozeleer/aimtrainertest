@@ -1,0 +1,121 @@
+//BUTTON STANDARD
+@mixin BtnSqr {
+  border: solid 2px;
+  border-radius: 0px;
+}
+
+// ----- BUTTONS SKILL TRAINING MENU -----
+@mixin BtnSubTitle {
+  @include BtnSqr;
+  padding: 10px 10px;
+  margin: 5px 5px 0 0;
+}
+
+//BUTTON SKILL
+@mixin BtnSqr100px {
+  @include BtnSubTitle;
+  font-size: 11px;
+  width: 100px;
+}
+
+//BUTTON SKILLS
+@mixin BtnSqr100pxSkill {
+  @include BtnSqr100px;
+  color: $white;
+  background-color: $blue;
+  border-color: $blueBorder;
+}
+
+@mixin BtnSqr100pxSkillFcs {
+  @include BtnSqr100pxSkill;
+  color: $black;
+  border-color: $blueBorder;
+  background-color: $white;
+  box-shadow: 0 0 15px $blue;
+}
+
+//BUTTON SETTINGS
+@mixin BtnSqr100pxSettings {
+  @include BtnSqr100px;
+  color: $grey;
+  border-color: $grey;
+  background-color: transparent;
+  margin-right: 0px;
+}
+
+// ----- BUTTONS CAROUSEL CARD -----
+
+//---- NORMAL BUTTONS ----
+@mixin BtnSqrPlay {
+  @include BtnSqr;
+  background-color: transparent;
+  font-size: 12px;
+  width: 80%;
+  border-color: $grey;
+  color: $lightgrey;
+  &::before {
+    content: "PLAY";
+  }
+}
+
+@mixin BtnSqrPlayFcs {
+  @include BtnSqrPlay;
+  background-color: $grey;
+  border: $grey;
+  color: $white;
+}
+
+@mixin BtnSqrChart {
+  @include BtnSqr;
+  border-color: $grey;
+  background-color: transparent;
+  font-size: 12px;
+  margin-right: 5px;
+  width: 20%;
+}
+
+@mixin BtnSqrChartFcs {
+  @include BtnSqrChart;
+  border-color: $white;
+}
+
+//---- ACTIVE BUTTONS ----
+@mixin BtnSqrPlayAct {
+  @include BtnSqrPlay;
+  border-color: $orange;
+  color: $white;
+}
+
+@mixin BtnSqrPlayActFcs {
+  @include BtnSqrPlayAct;
+  background-color: $orange;
+  border: $orange;
+}
+
+@mixin BtnSqrChartAct {
+  @include BtnSqrChart;
+}
+
+@mixin BtnSqrChartActFcs {
+  @include BtnSqrChartAct;
+  background-color: $grey;
+}
+
+//---- LOCKED BUTTONS ----
+
+@mixin BtnSqrChartLock {
+  @include BtnSqrChart;
+  color: transparent;
+  border-color: transparent;
+  cursor: inherit;
+}
+
+@mixin BtnSqrPlayLock {
+  @include BtnSqrPlay;
+  border: transparent;
+  text-align: left;
+  cursor: inherit;
+  &::before {
+    content: "LOCKED";
+  }
+}
