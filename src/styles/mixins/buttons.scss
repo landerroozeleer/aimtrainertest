@@ -105,13 +105,12 @@
 
 @mixin BtnSqrChartLock {
   @include BtnSqrChart;
-  color: transparent;
-  border-color: transparent;
-  cursor: inherit;
+  display: none;
 }
 
 @mixin BtnSqrPlayLock {
   @include BtnSqrPlay;
+  width: 100%;
   border: transparent;
   text-align: left;
   cursor: inherit;
